@@ -1,0 +1,28 @@
+{
+    "schemaVersion": 1,
+    "id": "why-is-my-chat-chain-broken",
+    "version": "${version}",
+    "name": "Why Is My Chat Chain Broken?",
+    "description": "",
+    "authors": [
+        "lucyy.p"
+    ],
+    "contact": {
+        "discord": "lucyy.p"
+    },
+    "license": "BSD-3-Clause",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "me.lucyydotp.chatchain.ChatChainDebug"
+        ]
+    },
+    "mixins": [
+        "why-is-my-chat-chain-broken.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${loader_version}",
+        "fabric": "*",
+        "minecraft": "${minecraft_version}"
+    }
+}
