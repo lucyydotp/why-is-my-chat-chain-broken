@@ -4,6 +4,7 @@
     "package": "me.lucyydotp.chatchain.mixin",
     "compatibilityLevel": "JAVA_21",
     "client": [
+        "ClientPacketListenerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

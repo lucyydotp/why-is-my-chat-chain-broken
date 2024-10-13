@@ -1,10 +1,16 @@
 package me.lucyydotp.chatchain;
 
-import net.fabricmc.api.ClientModInitializer;
+import net.minecraft.network.chat.MessageSignature;
+import org.jetbrains.annotations.Nullable;
 
-public class ChatChainDebug implements ClientModInitializer {
+import java.util.Base64;
 
-    @Override
-    public void onInitializeClient() {
+public class ChatChainDebug {
+
+    private static final Base64.Encoder base64 = Base64.getEncoder();
+
+    public static String pretty(@Nullable MessageSignature signature) {
+        if (signature == null) return "UNKNOWN";
+        return base64.encodeToString(signature.bytes());
     }
 }
